@@ -1,9 +1,12 @@
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "site-header") {
-    x.className += " responsive";
+let isMenuVisible = false;
+const siteNavbar = document.getElementById("site-navbar");
+
+function toggleMenuVisibility() {
+  isMenuVisible = !isMenuVisible;
+  if (isMenuVisible) {
+    siteNavbar.classList.add("menu-visible");
   } else {
-    x.className = "site-header";
+    siteNavbar.classList.remove("menu-visible");
   }
 }
 
@@ -13,11 +16,9 @@ const modalBtn = document.querySelectorAll(".signup-button");
 const formData = document.querySelectorAll(".formData");
 
 // launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+modalBtn.forEach(btn => btn.addEventListener("click", launchModal));
 
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
-
-

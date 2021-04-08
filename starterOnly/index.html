@@ -18,20 +18,25 @@
     />
   </head>
   <body>
-    <header class="site-header" id="myTopnav">
-      <img alt="gameon" src="assets/images/Logo.png" class="site-logo"/>
-      <nav class="site-navbar">
-        <ul class="navigation-menu">
-          <li><a href="#" class="active">Accueil</a></li>
-          <li><a href="#">Détails de l'évènement</a></li>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Évènements passés</a></li>
+    <header id="site-header">
+      <img alt="gameon" src="assets/images/Logo.png" id="site-logo" />
+      <nav id="site-navbar">
+        <button
+          id="toggle-navigation-button"
+          class="navigation-element"
+          type="button"
+          onclick="toggleMenuVisibility()"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <ul id="navigation-menu">
+          <li><a href="#" class="active navigation-element">Accueil</a></li>
           <li>
-            <a href="javascript:void(0);" class="icon" onclick="editNav()">
-              <i class="fa fa-bars"></i>
-            </a>
+            <a href="#" class="navigation-element">Détails de l'évènement</a>
           </li>
+          <li><a href="#" class="navigation-element">À propos</a></li>
+          <li><a href="#" class="navigation-element">Contact</a></li>
+          <li><a href="#" class="navigation-element">Évènements passés</a></li>
         </ul>
       </nav>
     </header>

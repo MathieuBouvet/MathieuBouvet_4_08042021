@@ -1,72 +1,92 @@
-.site-header {
+#site-header {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 3.5% 0;
 }
-.site-logo {
+#site-logo {
   margin-bottom: 15px;
 }
-.site-navbar {
+#site-navbar {
   margin-left: auto;
 }
-.navigation-menu {
+#navigation-menu {
   list-style: none;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
-.navigation-menu .icon {
-  color: red;
-}
-.site-header a {
+#site-header a {
   display: block;
-  text-align: center;
-  padding: 12px;
-  margin: 5px;
   text-decoration: none;
-  font-size: 20px;
   font-family: Roboto, sans-serif;
 }
 
-.navigation-menu a:hover,
-.navigation-menu a.active {
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 15px;
-}
-
-.navigation-menu a {
-  color: inherit;
-}
-
-.site-header .icon {
+#toggle-navigation-button {
   display: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 12px;
+  margin: 5px;
+  margin-left: auto;
+}
+
+.navigation-element {
+  background-color: transparent;
+  padding: 12px;
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 15px;
+  color: black;
+}
+.navigation-element:hover,
+.navigation-element.active {
+  background-color: red;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
-  .navigation-menu {
+  #navigation-menu {
+    display: none;
     flex-direction: column;
     align-items: stretch;
   }
-  .site-header a {
-    display: none;
-    text-align: left;
+  #site-navbar.menu-visible #navigation-menu {
+    display: flex;
   }
 
-  .site-header a.icon {
-    float: right;
-    display: block;
-  }
-
-  .site-header.responsive {
+  #site-navbar {
     position: relative;
   }
-  .site-header.responsive .icon {
+  #site-navbar.menu-visible #toggle-navigation-button {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .site-header.responsive a {
+  #toggle-navigation-button {
     display: block;
+  }
+}
+
+/* Handle toggle menu positioning */
+@media screen and (max-width: 584px) {
+  #site-header {
+    position: relative;
+  }
+  #site-navbar {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #site-logo {
+    margin-right: 100%;
+  }
+  #site-header {
+    position: static;
+  }
+  #site-navbar {
+    position: relative;
   }
 }
