@@ -30,6 +30,11 @@
   padding: 12px;
   margin: 5px;
   margin-left: auto;
+  color: var(--color-primary);
+}
+#site-navbar.menu-visible #toggle-navigation-button {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .navigation-element {
@@ -40,9 +45,9 @@
   border-radius: 15px;
   color: black;
 }
-.navigation-element:hover,
-.navigation-element.active {
-  background-color: red;
+#site-header a:hover,
+#site-header a.active {
+  background-color: var(--color-primary);
   color: white;
 }
 

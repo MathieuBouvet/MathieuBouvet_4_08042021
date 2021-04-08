@@ -1,6 +1,7 @@
 :root {
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
   --modal-duration: 0.8s;
+  --color-primary: #fe142f;
 }
 
 * {
@@ -24,7 +25,7 @@ p {
 }
 
 .main-button {
-  background: #fe142f;
+  background: var(--color-primary);
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
@@ -39,7 +40,7 @@ p {
 
 .modal-btn {
   font-size: 145%;
-  background: #fe142f;
+  background: var(--color-primary);
   display: flex;
   margin: auto;
   padding: 2em;
@@ -50,7 +51,7 @@ p {
 }
 
 .copyrights {
-  color: #fe142f;
+  color: var(--color-primary);
   padding: 0;
   font-size: 1rem;
   margin: 60px 0 30px;
