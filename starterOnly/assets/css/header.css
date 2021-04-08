@@ -67,6 +67,10 @@
   #toggle-navigation-button {
     display: block;
   }
+  #site-logo {
+    width: 150px;
+    margin-top: 10px;
+  }
 }
 
 /* Handle toggle menu positioning */
@@ -79,7 +83,7 @@
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 310px) {
   #site-logo {
     margin-right: 100%;
   }
