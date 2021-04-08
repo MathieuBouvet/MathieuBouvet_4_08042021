@@ -1,15 +1,15 @@
 function editNav() {
   var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
+  if (x.className === "site-header") {
     x.className += " responsive";
   } else {
-    x.className = "topnav";
+    x.className = "site-header";
   }
 }
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
+const modalBtn = document.querySelectorAll(".signup-button");
 const formData = document.querySelectorAll(".formData");
 
 // launch modal event
