@@ -57,9 +57,12 @@
     padding: 0;
     background-color: transparent;
     color: black;
+    row-gap: 30px;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    margin: 0;
+    font-size: 3.7rem;
+    line-height: 1.2;
     white-space: normal;
     width: unset;
   }
