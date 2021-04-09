@@ -59,11 +59,16 @@
         <div class="modal-content">
           <button id="signup-form-modal-close-button" class="close"></button>
           <div class="modal-body">
+            <!-- 
+              setting novalidate on the form prevents the display of native error messages,
+              still allowing us to use the constraint validations api 
+             -->
             <form
+              id="signup-form"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              novalidate 
             >
               <div class="form-group">
                 <label for="first-name">Prénom</label>
@@ -73,7 +78,9 @@
                   id="first-name"
                   name="firstName"
                   minlength="2"
+                  required
                 />
+                <p class="error-feedback">Veuillez entrer 2 caractères ou plus</p>
               </div>
               <div class="form-group">
                 <label for="last-name">Nom</label>
@@ -82,7 +89,10 @@
                   type="text"
                   id="last-name"
                   name="lastName"
+                  minlength="2"
+                  required
                 />
+                <p class="error-feedback">Veuillez entrer 2 caractères ou plus</p>
               </div>
               <div class="form-group">
                 <label for="email">E-mail</label>
@@ -91,7 +101,9 @@
                   type="email"
                   id="email"
                   name="email"
+                  required
                 />
+                <p class="error-feedback">Veuillez entrer une adresse mail valide</p>
               </div>
               <div class="form-group">
                 <label for="birthdate">Date de naissance</label>
@@ -100,7 +112,9 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  required
                 />
+                <p class="error-feedback">Veuillez entrer votre date de naissance</p>
               </div>
               <div class="form-group">
                 <label for="participations-number">
@@ -112,17 +126,19 @@
                   id="participations-number"
                   name="participationsNumber"
                   min="0"
-                  max="99"
+                  required
                 />
+                <p class="error-feedback">Veuillez entrer un nombre entier positif</p>
               </div>
-              <p class="text-label">Quelles villes ?</p>
-              <div class="form-group">
+              <p class="text-label">Quelle ville ?</p>
+              <div class="form-group choice-input-group">
                 <input
                   class="checkbox-input"
                   type="radio"
                   id="location1"
                   name="location"
                   value="New York"
+                  required
                 />
                 <label class="radio-label" for="location1">
                   <span class="choice-input-visual"></span>New York
@@ -177,22 +193,29 @@
                 <label class="radio-label" for="location6">
                   <span class="choice-input-visual"></span>Portland
                 </label>
+                <p class="error-feedback choice-input-feedback">Veuillez choisir une ville</p>
+
               </div>
-              <div class="form-group">
+              <div class="form-group choice-input-group">
                 <input
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
+                  name="acceptUserPolicies"
                   checked
+                  required
                 />
-                <label class="checkbox-label" for="checkbox1" required>
+                <label class="checkbox-label" for="checkbox1">
                   <span class="choice-input-visual"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-                <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                <p class="error-feedback choice-input-feedback">Veuillez acceptez les conditions d'utilisation</p>
+              </div>
+              <div class="form-group choice-input-group">
+                <input class="checkbox-input" type="checkbox" id="checkbox2" name="notifyNextEvents"/>
                 <label class="checkbox-label" for="checkbox2">
                   <span class="choice-input-visual"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
               </div>
               <button class="button btn-submit" type="submit">
