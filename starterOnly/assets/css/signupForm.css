@@ -15,7 +15,7 @@
 }
 .error-feedback {
   font-size: 0.8rem;
-  color: #e54858;
+  color: var(--color-error);
   padding: 0;
   line-height: 0.3;
   opacity: 0;
@@ -27,11 +27,12 @@
   font-size: 0.7rem;
   bottom: -9px;
 }
+
 #signup-form.was-validated input:invalid ~ .error-feedback {
   opacity: 1;
 }
 #signup-form.was-validated input:invalid {
-  border: 2px solid #e54858;
+  border: 2px solid var(--color-error);
 }
 
 .radio-label,
@@ -46,7 +47,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  border: 2px solid #279e7a;
+  border: 2px solid var(--color-custom-input);
   border-radius: 50%;
   text-indent: 29px;
   white-space: nowrap;
@@ -60,7 +61,7 @@
   content: "";
   width: 13px;
   height: 13px;
-  background-color: #279e7a;
+  background-color: var(--color-custom-input);
   border-radius: 50%;
   text-indent: 29px;
   white-space: nowrap;
@@ -79,7 +80,7 @@
   opacity: 1;
 }
 .checkbox-input:checked + .checkbox-label .choice-input-visual {
-  background: #279e7a;
+  background: var(--color-custom-input);
 }
 .checkbox-label .choice-input-visual {
   border-radius: 4px;

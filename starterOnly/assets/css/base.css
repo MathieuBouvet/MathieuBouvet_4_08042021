@@ -2,6 +2,8 @@
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
   --modal-duration: 0.8s;
   --color-primary: #fe142f;
+  --color-error: #e54858;
+  --color-custom-input: #279e7a;
 }
 
 * {
