@@ -5,9 +5,12 @@ const signupFormModalCloseButton = document.getElementById("signup-form-modal-cl
 
 function openSignupFormModal() {
   signupFormModal.classList.add("opened");
+  document.body.classList.add("no-scroll");
 }
 function closeSignupFormModal() {
   signupFormModal.classList.remove("opened");
+  document.body.classList.remove("no-scroll");
+
 }
 
 // control modal presence

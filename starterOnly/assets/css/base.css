@@ -38,6 +38,10 @@ input {
   outline: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .main-button {
   background: var(--color-primary);
   border-radius: 7px;
