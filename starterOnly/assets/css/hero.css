@@ -35,7 +35,7 @@
   text-transform: capitalize;
   font-size: 1.3rem;
   padding: 15px 23px;
-  width: fit-content;
+  justify-self: flex-start;
 }
 .hero-image {
   grid-area: image;
