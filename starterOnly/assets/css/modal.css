@@ -38,28 +38,12 @@
   outline: none;
   border: none;
   position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 32px;
-  height: 32px;
+  right: 22px;
+  top: 22px;
   opacity: 1;
   cursor: pointer;
-  transform: scale(0.7);
-}
-.close:before,
-.close:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 33px;
-  width: 3px;
-  background-color: #fff;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
+  color: white;
+  font-size: 1.5rem;
 }
 
 .modal-content {
