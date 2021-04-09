@@ -30,7 +30,7 @@
   padding: 0;
   font-size: 1.5rem;
 }
-.signup-button {
+#signup-button {
   grid-area: button;
   text-transform: capitalize;
   font-size: 1.3rem;
@@ -73,7 +73,7 @@
   .hero-image {
     border-radius: 10px;
   }
-  .signup-button {
+  #signup-button {
     margin: auto;
   }
   .copyrights {

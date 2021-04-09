@@ -25,7 +25,6 @@
           id="toggle-navigation-button"
           class="navigation-element"
           type="button"
-          onclick="toggleMenuVisibility()"
         >
           <i class="fa fa-bars"></i>
         </button>
@@ -47,7 +46,7 @@
           Vous aimez jouer ? Notre prochain évènement gaming est ouvert aux
           réservations... Places limitées !
         </p>
-        <button class="signup-button main-button">je m'inscris</button>
+        <button id="signup-button" class="main-button">je m'inscris</button>
         <img
           class="hero-image"
           src="assets/images/bg_img.jpg"
@@ -55,9 +54,9 @@
         />
       </section>
 
-      <div class="bground">
-        <div class="content">
-          <span class="close"></span>
+      <aside id="signup-form-modal" class="modal">
+        <div class="modal-content">
+          <button id="signup-form-modal-close-button" class="close"></button>
           <div class="modal-body">
             <form
               name="reserve"
@@ -214,11 +213,11 @@
             </form>
           </div>
         </div>
-      </div>
+      </aside>
     </main>
     <footer>
       <p class="copyrights">Copyright 2014 - 2020, GameOn Inc.</p>
     </footer>
-    <script src="assets/js/modal.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>

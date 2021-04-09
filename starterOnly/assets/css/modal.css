@@ -18,7 +18,7 @@
   font-size: 16px;
 }
 
-.bground {
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -29,8 +29,11 @@
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
 }
+.modal.opened {
+  display: block;
+}
 
-.content {
+.modal-content {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
@@ -158,6 +161,9 @@ input[data-error]::after {
   top: 19%;
 }
 .close {
+  background-color: transparent;
+  outline: none;
+  border: none;
   position: absolute;
   right: 15px;
   top: 15px;
