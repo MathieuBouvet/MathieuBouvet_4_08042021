@@ -27,7 +27,7 @@
 }
 .error-feedback.choice-input-feedback {
   font-size: 0.7rem;
-  bottom: -5px;
+  bottom: -9px;
 }
 #signup-form.was-validated input:invalid ~ .error-feedback {
   opacity: 1;
