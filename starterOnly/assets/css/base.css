@@ -24,6 +24,20 @@ p {
   padding: 0.5vw;
 }
 
+label {
+  font-family: var(--font-default);
+  font-size: 17px;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 11px;
+}
+
+input {
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+
 .main-button {
   background: var(--color-primary);
   border-radius: 7px;
