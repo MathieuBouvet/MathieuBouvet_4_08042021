@@ -1,9 +1,11 @@
 // DOM Elements
 function signupModal() {
   const signupButton = document.getElementById("signup-button");
+
   const signupFormModal = document.getElementById("signup-form-modal");
-  const signupFormModalCloseButton = document.getElementById(
-    "signup-form-modal-close-button"
+  
+  const signupFormModalCloseButtons = document.getElementsByClassName(
+    "close-signup-form-modal"
   );
 
   function openSignupFormModal() {
@@ -17,5 +19,8 @@ function signupModal() {
 
   // control modal presence
   signupButton.addEventListener("click", openSignupFormModal);
-  signupFormModalCloseButton.addEventListener("click", closeSignupFormModal);
+
+  for(let element of signupFormModalCloseButtons){
+    element.addEventListener("click", closeSignupFormModal)
+  }
 }
