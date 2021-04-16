@@ -3,7 +3,7 @@
   padding: 8px;
   width: 100%;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 1rem;
   height: 48px;
 }
 .form-group {
@@ -24,7 +24,7 @@
   bottom: -12px;
 }
 .error-feedback.choice-input-feedback {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   bottom: -9px;
 }
 
@@ -32,14 +32,18 @@
   opacity: 1;
 }
 #signup-form.was-validated input:invalid {
-  border: 2px solid var(--color-error);
+  border-color: var(--color-error);
+}
+#signup-form input {
+  border: 2px solid white;
+  transition: border-color 0.3s;
 }
 
 .radio-label,
 .checkbox-label {
   position: relative;
   margin-left: 36px;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: normal;
 }
 .radio-label .choice-input-visual,
@@ -174,5 +178,5 @@
 /* custom select end */
 .text-label {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
 }

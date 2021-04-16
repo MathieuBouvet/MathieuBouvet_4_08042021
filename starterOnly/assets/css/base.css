@@ -12,10 +12,13 @@
   padding: 0;
 }
 
+html {
+  font-size: 18px;
+}
+
 /* Landing Page */
 body {
   font-family: var(--font-default);
-  font-size: 18px;
   max-width: 1360px;
   margin: auto;
   padding: 0 30px;
@@ -27,7 +30,7 @@ p {
 }
 
 label {
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 5px;
@@ -57,22 +60,20 @@ input {
   background: #3876ac;
 }
 
-.modal-btn {
-  font-size: 145%;
-  background: var(--color-primary);
-  display: flex;
-  margin: auto;
-  padding: 2em;
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
 .copyrights {
   color: var(--color-primary);
   padding: 0;
   font-size: 1rem;
   margin: 60px 0 30px;
   font-weight: bolder;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 584px) {
+  html {
+    font-size: 14px;
+  }
 }
