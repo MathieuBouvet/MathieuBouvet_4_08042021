@@ -103,8 +103,15 @@
                   type="email"
                   id="email"
                   name="email"
+                  pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
                   required
                 />
+                <!--  email regexp
+                        - user name : match atleast one letter, digit, or some special characters 
+                        - domain name : match at least one letter, digit, or hyphen
+                        - tld : match at least one letter, digit, or hyphen, and subdomains, like in .co.uk
+                      it is the same as the default regex provided by most browsers, except for a required tld
+                -->
                 <p class="error-feedback">Veuillez entrer une adresse mail valide</p>
               </div>
               <div class="form-group">
@@ -153,7 +160,7 @@
                   value="San Francisco"
                 />
                 <label class="radio-label" for="location2">
-                  <span class="choice-input-visual"></span> San Francisco
+                  <span class="choice-input-visual"></span>San Francisco
                 </label>
                 <input
                   class="checkbox-input"
